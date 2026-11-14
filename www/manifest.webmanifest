@@ -1,0 +1,14 @@
+{
+  "name": "RemixWave — Audio Studio",
+  "short_name": "RemixWave",
+  "description": "A pocket audio effects studio. Play your own tracks with expressive effects.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c0e18",
+  "theme_color": "#0c0e18",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icons/remixwave.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ]
+}

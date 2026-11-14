@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0e18">
+  <meta name="description" content="RemixWave — a pocket audio effects studio. Play your own audio with expressive effects.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/remixwave.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>RemixWave — Audio Studio</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="RemixWave home"><span class="brand-mark" aria-hidden="true">≈</span><span>Remix<span class="brand-light">Wave</span></span></a>
+      <span class="live-badge"><span class="live-dot"></span> AUDIO STUDIO</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR SOUND, REMIXED</p>
+      <h1 id="page-title">Make it <span>feel</span> different.</h1>
+      <p class="intro-copy">Choose a track from your phone, pick a mood, and press play.</p>
+    </section>
+
+    <section class="track-card" aria-label="Audio track">
+      <input id="file-input" class="visually-hidden" type="file" accept="audio/*">
+      <button id="choose-track" class="upload-button" type="button" aria-label="Choose an audio file">
+        <span class="upload-icon" aria-hidden="true">＋</span>
+        <span class="upload-text"><strong id="track-name">Choose a track</strong><small id="track-detail">MP3, WAV, M4A and more</small></span>
+        <span class="upload-arrow" aria-hidden="true">↗</span>
+      </button>
+      <div class="player">
+        <button id="play-button" class="play-button" type="button" aria-label="Play" disabled><span id="play-icon" aria-hidden="true">▶</span></button>
+        <div class="timeline">
+          <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek through track" disabled>
+          <div class="time-row"><span id="current-time">0:00</span><span id="duration">0:00</span></div>
+        </div>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">Add a track to get started.</div>
+    </section>
+
+    <section class="effects-section" aria-labelledby="effects-title">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR FREQUENCY</p><h2 id="effects-title">Choose a vibe</h2></div><span class="section-count">05 PRESETS</span></div>
+      <div class="preset-grid">
+        <button class="preset selected" data-preset="original" type="button" aria-pressed="true"><span class="preset-symbol">◉</span><strong>Original</strong><small>Just as it is</small></button>
+        <button class="preset" data-preset="bass" type="button" aria-pressed="false"><span class="preset-symbol">▰</span><strong>Bass boost</strong><small>Feel the low end</small></button>
+        <button class="preset" data-preset="slow" type="button" aria-pressed="false"><span class="preset-symbol">◷</span><strong>Slow motion</strong><small>Take it easy</small></button>
+        <button class="preset" data-preset="echo" type="button" aria-pressed="false"><span class="preset-symbol">〰</span><strong>Dream echo</strong><small>Let it linger</small></button>
+        <button class="preset" data-preset="lofi" type="button" aria-pressed="false"><span class="preset-symbol">✳</span><strong>Lo-fi</strong><small>Warm & hazy</small></button>
+      </div>
+    </section>
+
+    <section class="volume-section" aria-label="Volume control"><div class="volume-label"><span>OUTPUT LEVEL</span><span id="volume-value">80%</span></div><input id="volume" type="range" min="0" max="100" value="80" aria-label="Output volume"></section>
+    <footer><span class="footer-mark">≈</span><span>Made for listening differently.</span><span class="offline-label"><span class="live-dot"></span> READY OFFLINE</span></footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

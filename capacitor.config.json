@@ -1,0 +1,13 @@
+{
+  "appId": "com.remixwave.app",
+  "appName": "RemixWave",
+  "webDir": "www",
+  "backgroundColor": "#0c0e18",
+  "ios": {
+    "contentInset": "automatic",
+    "allowsInlineMediaPlayback": true
+  },
+  "android": {
+    "backgroundColor": "#0c0e18"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "remixwave-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RemixWave audio effects studio for Android, iOS, and installable web browsers.",
+  "scripts": {
+    "build": "node scripts/verify-web.mjs",
+    "cap:sync": "npm run build && cap sync",
+    "cap:android": "npm run build && cap sync android && cap open android",
+    "cap:ios": "npm run build && cap sync ios && cap open ios",
+    "android:debug": "npm run build && cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/ios": "^6.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1"
+  }
+}
